@@ -1,0 +1,44 @@
+
+
+VIDEO:
+<video src="Buborekok.mov" autoplay="" loop=""></video>
+
+LOGO
+<div class="header-overlay">
+  <img src="Home Time Productions Logo (White with shadow).png"/>
+  <nav class="navigation-overlay">
+
+NAVIGATION styling:
+nav{
+  position: fixed;
+  z-index:1;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  height:100px;
+  background-color: none
+
+}
+
+ul{
+  text-align: center;
+  min-height: 15vh;
+}
+
+ul li{
+  list-style: none;
+  display: inline-block;
+  float: center;
+  list-style-position: inside;
+  line-height: 100px;
+
+}
+
+ul li a{
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  padding: 0 20px;
+}

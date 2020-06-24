@@ -1,0 +1,469 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  background-color: black;
+}
+
+/* Typography */
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-family: 'Amatic SC';
+  font-size: 4em;
+  text-shadow: 1px 2px 0px black, 
+               0px -0.2px 0px black, 
+               -0.4px 0px 0px black,
+               1px 4px 5px black;
+  color: white;
+  /* border: orangered 5px solid; */
+  
+}
+
+.logo {
+  width: 50%;
+  margin-left: 25%;
+  /* margin-top: 1.5em; */
+  padding: 1em;
+  /* border: orangered 5px solid; */
+}
+
+
+/* ================== General Layout ================= */
+
+
+/* ===== MOBILE VIEW ===== */
+
+
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0px, 600px) minmax(1em, 1fr);
+}
+
+.header-content {
+  grid-column: 2/ -2;
+  display: grid;
+  grid-template-areas: 
+    "home"
+    "nav";
+  /* border: rgb(109, 63, 46) 5px solid; */
+}
+
+.logo-link,
+.bathroom-videofile {
+  grid-area: home;
+}
+
+.logo-link {
+  justify-self: center;
+  align-self: start;
+  /* border: orangered 5px solid; */
+}
+
+.bathroom-videofile {
+  width: 100%;
+  z-index: -1;
+}
+
+.nav-hero {
+  display: none;
+}
+
+.open-nav-styles {
+  width: 8vw;
+  height: 3vh;
+  font-size: 6vw;
+  padding-bottom: 1.5em;
+  justify-self: right;
+  color: yellow;
+  border: none;
+  background-color: black;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.desktop-logo-link {
+  display: none;
+}
+
+.open-nav {
+  grid-column: 2 /-2;
+}
+
+
+
+/* LINKS */
+
+.nav-list {
+  padding: 0;
+}
+
+.nav-item { 
+  /* border: rgb(109, 63, 46) 5px solid; */
+  display: grid;
+  grid-template-areas: 
+    "ovrlay";
+  text-align: center;
+  width: 100%;
+  
+}
+
+.nav-link {
+  grid-area: ovrlay;
+  align-self: center;
+}
+
+
+.close-nav {
+  display: none;
+}
+
+
+/* VIDEOS */
+
+.vid-bg {
+  width: 100%;
+  grid-area: ovrlay;
+  z-index: -1;
+  margin: 1em 0;
+}
+
+.about-us-videofile {
+  margin-top: -15px;
+  margin-bottom: -17px;
+}
+
+
+@media (min-width: 700px) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0px, 800px) minmax(1em, 1fr);
+  }
+  .nav-link {
+    font-size: 6em;
+  }
+
+}
+
+/* ========== Desktop View ========== */
+
+@media (min-width:1000px) {
+
+  .bthr-IO {
+    display: none;
+  }
+
+  .open-nav {
+    display: none;
+  }
+
+  .header-theatre {
+    position: absolute;
+  }
+
+  .main-grid {
+    display: block;
+  }
+  
+  .nav {
+    display: grid;
+    grid-template-columns: minmax(2em, 1fr) minmax(0px, 1300px) minmax(2em, 1fr);
+    /* border: orchid 5px solid; */
+  }
+
+
+  .nav-list {
+    grid-column: 2/ -2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 0;
+    /* border: orangered 5px solid; */
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    font-size: 2.3rem;
+    text-shadow: 1px 1px 0px black, 
+                 0px -0.2px 0px black, 
+                 -0.4px 0px 0px black,
+                  0.5px 0.5px 1px black;
+    padding: 0.5em 0.2em;
+    /* border: black 5px solid; */
+  }
+
+  .logo-link {
+    display: none;
+  }
+
+  .desktop-logo {
+    width: clamp(20vw, 20rem, 26vw);
+    padding-right: 0.5em;
+    /* border: palegreen 5px solid; */
+  }
+
+  .desktop-logo-link {
+    display: block;
+    /* border: steelblue 5px solid; */
+  }
+
+  .vid-bg {
+    display: none;
+  }
+
+  .bathroom-videofile {
+    display: block;
+    position: fixed;
+    object-fit: cover;
+    margin-top: 0px;
+    padding: 0;
+    height: 100vh;
+  }
+
+  .nav-hero {
+    opacity: 0;
+    transition: 500ms;
+  }
+
+
+}
+
+@media (min-width:1900px) {
+
+  .nav {
+    display: grid;
+    grid-template-columns: minmax(2em, 1fr) minmax(0px, 1700px) minmax(2em, 1fr);
+    /* border: orchid 5px solid; */
+  }
+
+  .nav-link {
+    font-size: 4rem;
+  }
+
+  .desktop-logo {
+    width: 25rem;
+  }
+
+}
+
+        /* ======================= THEATRE ====================== */
+
+
+/* =============== Typography ============== */
+
+.general-typography {
+  text-decoration: none;
+  font-family: 'Amatic SC';
+  text-shadow: 
+                1px 1px 0px black, 
+                0px -0.2px 0px black, 
+               -0.4px 0px 0px black;
+               /* 1px 4px 5px black; */
+  color: white;
+  /* border: orangered 5px solid; */
+}
+            /* SHOW-CARDS TYPOGRAPHY */
+
+.show-title {
+  margin: 0, 0, .5em;
+  font-size: clamp(1.8rem, 4vw, 5vw);
+  
+}
+
+.show-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  margin: 0;
+  padding: 1em, 0;
+}
+
+.list-category {
+  margin: 0;
+  font-size: clamp(1.4rem, 3rem, 5vw);
+}
+
+.list-info {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.5rem, 2.5vw);
+}
+
+/* ================== THEATRE - General Layout ================= */
+
+/* HEADER LAYOUT */
+
+.header-title {
+  font-size: 6vw;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 1.5em;
+}
+
+.header-text {
+  font-size: clamp(1.5rem, 3.5rem, 3.1vw);
+  margin: 0;
+  padding: 0.5em 0 1.5em;
+  text-overflow: hidden;
+  border: olive solid 5px;
+}
+
+.theatre-main-grid {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(0px, 300px) minmax(1em, 1fr));
+}
+
+.theatre-header-content {
+  grid-column: 2/ -3;
+  max-height: 100%;
+  border: springgreen solid 5px;
+}
+
+
+.theatre-header {
+  background-image: url(../img/JuliskaLondon.png);
+  background-size: cover;
+  background-position: right;
+  width: 100%;
+  margin: 0;
+  max-height: 100vh;
+  /* min-height: 30vh; */
+
+}
+
+/* SHOW-CARDS LAYOUT */
+
+
+
+.showcard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) repeat(3, minmax(0, 300px) minmax(0, 1fr));
+  grid-template-areas: 
+  ". info placard placard ."
+  ". info trailer trailer .";
+  grid-column-gap: 1em;
+  margin: 0;
+  max-height: 100vh;
+}
+
+.showcard-info {
+  grid-area: info;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1em;
+  align-self: flex-start;
+}
+
+.play-discription {
+  display: none;
+}
+
+.placard {
+  grid-column: 3/ -2;
+  padding: 2vh 0 0;
+  margin: 0;
+  grid-row: 1;
+  align-self: center;
+  justify-self: right;
+}
+
+.placard-src {
+  max-width: 100%;
+  max-height: 48vh;
+  padding: 0;
+  margin: 0;
+  box-shadow: 
+  /* 1px 1px 0px black,  */
+  /* 0px -0.2px 0px black,  */
+  /* -0.4px 0px 0px black, */
+  2.5px 4px 5px black;
+}
+
+.trailer {
+  grid-column: 3/ -2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: right;
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  padding-top: min(48vh, 56.25%); 
+  height: 0;
+  margin-bottom: 2vh;
+  /* border: springgreen 5px solid; */
+}
+
+.trailer-src {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 48vh;
+  box-shadow: 
+  /* 1px 1px 0px black,  */
+  /* 0px -0.2px 0px black,  */
+  /* -0.4px 0px 0px black, */
+  2.5px 4px 5px black;
+}
+
+.day-at-the-beach {
+  background-color: rgb(2, 128, 128);
+}
+
+.unveiling {
+  background-color: #483e3f;
+}
+
+.venus-in-fur {
+  background-color: #7b393f;
+}
+
+.medea {
+  background-color: #48292c;
+}
+
+.matter-of-husbands {
+  background-color: #d1b4b7;
+  /* border: tomato 5px solid; */
+}
+
+.flex-box {
+  grid-column: 2/ -2;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+/* .matter-of-husbands-showcard-info {
+
+  border: chartreuse 5px solid;
+} */
+
+.matter-of-husbands-placard {
+  grid-column: 3/ -2;
+  max-width: min(63.3vw, 580px);
+  justify-self: end;
+  align-self: center;
+  /* border: teal 5px solid;  */
+  
+}
+
+.matter-of-husbands-src {
+
+  justify-content: center;
+  width: 100%;
+  /* border: brown 5px solid; */
+}
